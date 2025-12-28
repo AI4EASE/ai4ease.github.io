@@ -22,3 +22,79 @@
   --radius: 14px;
   --container: 1100px;
 }
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(106,92,255,0.08), transparent 40%),
+    radial-gradient(1000px 500px at 90% 80%, rgba(59,182,201,0.08), transparent 40%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  overflow-x:hidden;
+}
+.nav{
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+}
+.nav-links a {
+  color: var(--text-soft);
+}
+.nav-links a:hover{
+  color: var(--text-main);
+  background: rgba(15,23,42,0.04);
+}
+.cta {
+  background: var(--accent-1);
+  color: #ffffff;
+}
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 10px 30px rgba(15,23,42,0.08),
+    0 1px 0 rgba(255,255,255,0.6) inset;
+}
+.hero-left h1 {
+  color: var(--text-main);
+}
+
+.lead,
+.trust,
+.footer,
+.contact-form label {
+  color: var(--text-soft);
+}
+
+.section h2 {
+  background: var(--accent-1);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.btn-primary {
+  background: var(--accent-1);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(106,92,255,0.18);
+}
+
+.btn-ghost {
+  border: 1px solid var(--glass-border);
+  color: var(--text-soft);
+}
+.kpi {
+  background: linear-gradient(
+    135deg,
+    rgba(106,92,255,0.12),
+    rgba(59,182,201,0.12)
+  );
+  color: var(--text-main);
+}
+.kpi span {
+  color: var(--text-muted);
+}
+
+.dash-card {
+  color: var(--text-soft);
+  background: rgba(255,255,255,0.6);
+}
