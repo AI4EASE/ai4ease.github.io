@@ -1,14 +1,23 @@
-:root{
-  --bg-1: #041229;    /* deep navy */
-  --bg-2: #071a3a;    /* mid navy */
-  --neon-a: #7df3ff;  /* cyan */
-  --neon-b: #b072ff;  /* purple */
-  --glass: rgba(255,255,255,0.06);
-  --muted: rgba(231,238,250,0.7);
-  --accent-1: linear-gradient(135deg, var(--neon-a), var(--neon-b));
+::root {
+  --bg-1: #f6f9ff;      /* very light blue-white */
+  --bg-2: #e9efff;      /* soft lavender-blue */
+  
+  --neon-a: #2fc7d8;    /* softened cyan */
+  --neon-b: #7a5cff;    /* softened purple */
+
+  --glass: rgba(0, 0, 0, 0.04);  /* light glass effect */
+  --muted: rgba(20, 30, 60, 0.65);
+
+  --accent-1: linear-gradient(
+    135deg,
+    var(--neon-a),
+    var(--neon-b)
+  );
+
   --radius: 14px;
   --container: 1100px;
 }
+
 
 *{box-sizing:border-box}
 html,body{height:100%}
