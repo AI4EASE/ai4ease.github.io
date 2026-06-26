@@ -282,5 +282,11 @@ h2 {
 
   .nav-links {
     display: none;
+
+  .logo-img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
   }
 }
