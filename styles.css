@@ -263,9 +263,9 @@ h2 {
   transition: all 0.8s ease;
 }
 
-.reveal.active {
+.reveal {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* RESPONSIVE */
