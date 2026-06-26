@@ -1,11 +1,11 @@
 :root {
-  --bg: #070A12;
-  --card: rgba(255, 255, 255, 0.06);
-  --stroke: rgba(255, 255, 255, 0.12);
-  --text: rgba(255, 255, 255, 0.9);
-  --muted: rgba(255, 255, 255, 0.6);
-  --accent: #7C5CFF;
-  --accent2: #00D4FF;
+  --bg: #f7f8fb;
+  --card: rgba(255, 255, 255, 0.8);
+  --stroke: rgba(0, 0, 0, 0.08);
+  --text: #0b0f19;
+  --muted: rgba(11, 15, 25, 0.65);
+  --accent: #5b6cff;
+  --accent2: #00b8d9;
 }
 
 * {
@@ -16,11 +16,9 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #0B1020, var(--bg));
+  background: #f7f8fb;
   color: var(--text);
-  overflow-x: hidden;
 }
-
 .container {
   width: min(1100px, 92%);
   margin: auto;
