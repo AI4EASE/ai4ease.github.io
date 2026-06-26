@@ -1,55 +1,32 @@
-// Scroll reveal animation
-const observerOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.1
-};
-
+// Smooth scroll reveal animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      entry.target.classList.add("active");
     }
   });
-}, observerOptions);
+}, {
+  threshold: 0.1
+});
 
-// Observe all elements with reveal-on-scroll class
-document.querySelectorAll('.reveal-on-scroll, .stagger-children').forEach((el) => {
+document.querySelectorAll(".reveal").forEach(el => {
   observer.observe(el);
 });
 
-// Navbar scroll handling
-let lastScroll = 0;
-const navbar = document.querySelector('.nav');
+document.addEventListener("mousemove", (e) => {
+  const glow = document.querySelector(".glow");
+  if (!glow) return;
 
-window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-  
-  // Add scrolled class when page is scrolled
-  if (currentScroll > 20) {
-    navbar.classList.add('nav-scrolled');
-  } else {
-    navbar.classList.remove('nav-scrolled');
-  }
-  
-  // Hide/show navbar based on scroll direction
-  if (currentScroll > lastScroll && currentScroll > 80) {
-    navbar.classList.add('nav-hidden');
-  } else {
-    navbar.classList.remove('nav-hidden');
-  }
-  
-  lastScroll = currentScroll;
+  const x = (e.clientX / window.innerWidth - 0.5) * 30;
+  const y = (e.clientY / window.innerHeight - 0.5) * 30;
+
+  glow.style.transform = `translate(${x}px, ${y}px)`;
 });
 
-// Smooth hover effect for buttons
-document.querySelectorAll('.btn-primary').forEach(button => {
-  button.addEventListener('mousemove', (e) => {
-    const rect = button.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    button.style.setProperty('--mouse-x', `${x}px`);
-    button.style.setProperty('--mouse-y', `${y}px`);
-  });
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".nav");
+  nav.style.background =
+    window.scrollY > 20
+      ? "rgba(0,0,0,0.6)"
+      : "rgba(0,0,0,0.3)";
 });
